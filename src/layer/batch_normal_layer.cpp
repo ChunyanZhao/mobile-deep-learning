@@ -108,7 +108,7 @@ namespace mdl {
                       _weight[1]->get_data(),
                       _variance->get_data());
 
-        // replicate variance to input size
+        // replicate mean to input size
         Gemmer::gemmers[0]->sgemm(num, _channels, 1,
                                   _batch_sum_multiplier->get_data(),
                                   _mean->get_data(),
